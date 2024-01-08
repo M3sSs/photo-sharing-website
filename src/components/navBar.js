@@ -10,7 +10,8 @@ export class Navbar extends Component {
             <li><a href="#">You</a></li>
             <li><a href="#">Explore</a></li>
             <li><a href="#">Prints</a></li>
-            <li><a href="#">Trending</a></li>
+            <li><a href="#">Trending, 
+            </a></li>
             <li><a href="#">Events</a></li>
             <li><a href="#">Get Pro</a></li>
             <li>
@@ -20,7 +21,14 @@ export class Navbar extends Component {
             </li>
             <li><a href="#">More</a></li>
           </ul>
+          <div className="checkbox">
+          <input type="checkbox" id="myCheckbox"/>
+          <label for="myCheckbox" className="checkbox-label">
+          <img src="Images/menu-bar.png" alt="Image Over Checkbox"/>
+          </label>
+          </div>
         </div>
+          
       </nav>
     )
   }

@@ -24,9 +24,25 @@ body {
     color: #fff;
     font-size: 24px;
     font-weight: bold;
-    text-decoration: none;
+    text-decoration:
+     none;
   }
   
+  .checkbox{
+    display: none;
+  }
+  .checkbox-label {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .checkbox-label img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+  }
   .navbar-links {
     display: flex;
     list-style: none;
@@ -57,14 +73,22 @@ body {
   
   /* Responsive styles for smaller screens */
   @media (max-width: 768px) {
+    .navbar-links{
+      display: none;
+    }
+
     .navbar-container {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: space-between;
       align-items: center;
       padding: 0 20px;
     }
-  
+    .checkbox{
+      display: inline;
+      margin-right: 40px;
+      margin-bottom: 30px;
+    }
     .navbar-toggle {
       display: block;
     }
