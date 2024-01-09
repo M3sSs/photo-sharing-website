@@ -5,7 +5,16 @@ export class Navbar extends Component {
     return (
         <nav className="navbar">
         <div className="navbar-container">
+          <div className="header">
           <a href="#" className="navbar-logo">PicsArt</a>
+          <div className="checkbox">
+          <input type="checkbox" id="myCheckbox"/>
+          <label for="myCheckbox" className="checkbox-label">
+          <img src="Images/menu-bar.png" alt="Image Over Checkbox"/>
+          </label>
+
+          </div>
+          </div>
           <ul className="navbar-links">
             <li><a href="#">You</a></li>
             <li><a href="#">Explore</a></li>
@@ -21,12 +30,6 @@ export class Navbar extends Component {
             </li>
             <li><a href="#">More</a></li>
           </ul>
-          <div className="checkbox">
-          <input type="checkbox" id="myCheckbox"/>
-          <label for="myCheckbox" className="checkbox-label">
-          <img src="Images/menu-bar.png" alt="Image Over Checkbox"/>
-          </label>
-          </div>
         </div>
           
       </nav>
