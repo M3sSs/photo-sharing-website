@@ -1,0 +1,322 @@
+/* Reset some default styles */
+/* body, h1, h2, h3, p, margin, padding {
+    margin-top: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+   */
+/* Apply styles to the overall container */
+@import url('https://fonts.googleapis.com/css2?family=Kenia&family=Libre+Baskerville&family=Montserrat:ital,wght@1,300&family=Playfair+Display:ital@1&family=Roboto+Mono:ital,wght@0,100;1,400&family=Zen+Dots&display=swap');
+body{
+  background-color:  #ffffff; /* Light Peach */
+}
+.container {
+  
+  margin-top: 40px;
+  /* border: 2px dotted green; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+  padding: 20px;
+
+}
+
+/* Style the heading */
+.Heading {
+  display: flex;
+  /* border: 2px dotted green; */
+  
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+.Heading h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 40px;
+}
+
+/* Style the main categories */
+.main-categories {
+  /* border: red dashed; */
+  display: flex;
+  /* flex-direction: column; */
+  /* grid-template-columns: repeat(3, 1fr); for creating 3 columns of equal width */
+  align-items: center;
+  /* justify-content: center; */
+  padding: 4%;
+  /* grid-template-columns: 1fr; */
+  gap: 4%;
+
+  width: 90%;
+}
+
+/* Style the main categories containers */
+.Travel,
+.Space,
+.Landscapes {
+  border-radius: 10px;
+  background-color: #ddd;
+  /* Set a background color for visualization */
+  padding: 15px;
+  height: 30vh;
+  width: 25vw;
+  /* width: auto; */
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.Travel{
+  background-image: url('HomeImages/Travel.jpeg');
+  background-size: 100% 100%;
+  
+}
+.Travel:hover{
+  transform: scale(1.1);
+}    
+.Space:hover{
+  transform: scale(1.1);
+}
+.Landscapes:hover{
+  transform: scale(1.1);
+}    
+
+
+.Space {
+  background-image: url('HomeImages/Space.jpeg');
+  background-size: 100% 100%;
+  /* Adjust the background size as needed */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  /* Do not repeat the background image */
+  /* z-index: -1; */
+  /* opacity: 0.80; */
+  /* padding: 15px; */
+  text-align: center;
+}
+
+.Landscapes {
+  background-image: url('HomeImages/Landscape.jpeg');
+  background-size: 100% 100%;
+  /* Adjust the background size as needed */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  /* Do not repeat the background image */
+  /* z-index: -1; */
+  /* opacity: 0.70; */
+  /* padding: 15px; */
+  text-align: center;
+}
+
+/* Style the other categories */
+.other-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-left: 6%;
+  width: 90%;
+  
+}
+
+/* Style the other categories containers */
+.animals,
+.Pop,
+.SciFi,
+.Inspiring,
+.Seasonal,
+.artistic,
+.anime,
+.fantasy {
+  border-radius: 15px;
+  background-color: #ddd;
+  /* Set a background color for visualization */
+  padding: 15px;
+  height: 10rem;
+  width: 75%;
+  /* margin: 3rem; */
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.animals {
+  background-image: url('HomeImages/Animal.jpeg');
+  background-size: 100% 100%;
+  /* Adjust the background size as needed */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  /* Do not repeat the background image */
+  /* z-index: -1; */
+  /* opacity: 0.80; */
+  /* padding: 15px; */
+  text-align: center;
+}
+.Text{
+  font-size: 40px;
+  /* font-style: none; */
+  /* font-weight: bold; */
+  font-family: 'Libre Baskerville', serif;
+  color: #ffffff;
+}
+ 
+.Pop {
+  background-image: url('HomeImages/Batman.jpeg');
+  background-size: 100% 100%;
+  /* Adjust the background size as needed */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  /* Do not repeat the background image */
+  /* z-index: -1;
+  opacity: 0.80; */
+  /* padding: 15px; */
+  text-align: center;
+}
+
+.SciFi {
+  background-image: url('HomeImages/SciFi.jpeg');
+  background-size: 100% 100%;
+  /* Adjust the background size as needed */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  /* Do not repeat the background image */
+  /* z-index: -1;
+  opacity: 0.80; */
+  /* padding: 15px; */
+  text-align: center;
+}
+
+.Inspiring {
+  background-image: url('HomeImages/Inspiring.jpeg');
+  background-size: 100% 100%;
+  /* Adjust the background size as needed */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  /* Do not repeat the background image */
+  /* z-index: -1;
+  opacity: 0.80; */
+  /* padding: 15px; */
+  text-align: center;
+}
+
+.Seasonal {
+  background-image: url('HomeImages/Winter.jpeg');
+  background-size: 100% 100%;
+  /* Adjust the background size as needed */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  /* Do not repeat the background image */
+  /* z-index: -1;
+  opacity: 0.80; */
+  /* padding: 15px; */
+  text-align: center;
+}
+
+.artistic {
+  background-image: url('HomeImages/Artist.jpeg');
+  background-size: 100% 100%;
+  /* Adjust the background size as needed */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  /* Do not repeat the background image */
+  /* z-index: -1;
+  opacity: 0.80; */
+  /* padding: 15px; */
+  text-align: center;
+}
+
+.anime {
+  background-image: url('HomeImages/Anime.jpeg');
+  background-size: 100% 100%;
+  /* Adjust the background size as needed */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  /* Do not repeat the background image */
+  /* z-index: -1;
+  opacity: 0.80; */
+  /* padding: 15px; */
+  text-align: center;
+}
+
+.fantasy {
+  background-image: url('HomeImages/Fantasy.jpeg');
+  background-size: 100% 100%;
+  /* Adjust the background size as needed */
+  background-position: center;
+  /* Center the background image */
+  background-repeat: no-repeat;
+  /* Do not repeat the background image */
+  /* z-index: -1;
+  opacity: 0.80; */
+  /* padding: 15px; */
+  text-align: center;
+}
+.animals:hover{
+  transform: scale(1.1);
+}
+.Pop:hover{
+  transform: scale(1.1);
+}
+.SciFi:hover{
+  transform: scale(1.1);
+}
+.Inspiring:hover{
+  transform: scale(1.1);
+}
+.Seasonal:hover{
+  transform: scale(1.1);
+}
+.artistic:hover{
+  transform: scale(1.1);
+}
+.anime:hover{
+  transform: scale(1.1);
+}
+.fantasy:hover{
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .container {
+    margin-top: 55px;
+  }
+
+  .main-categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Travel,
+  .Space,
+  .Landscapes {
+    border-radius: 10px;
+    background-color: #ddd;
+    /* Set a background color for visualization */
+    /* padding: 15px; */
+    height: 20cap;
+    width: 60%;
+    margin: 2%;
+    /* width: auto; */
+    text-align: center;
+  }
+
+  .other-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 90%;
+  }
+}
