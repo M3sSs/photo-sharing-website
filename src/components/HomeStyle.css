@@ -35,7 +35,8 @@ body{
 }
 
 .Heading h1 {
-  font-family: 'Libre Baskerville', serif;
+  /* font-weight: bold; */
+  font-family: 'Libre Baskerville';
   font-size: 40px;
 }
 
@@ -297,6 +298,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10%;
   }
 
   .Travel,
@@ -316,7 +318,7 @@ body{
   .other-categories {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    /* gap: 2rem; */
     width: 90%;
   }
 }

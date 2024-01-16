@@ -1,9 +1,9 @@
 import React from 'react'
-
-export default function PhotoCard() {
+import './PhotoCardstyle.css'
+export default function PhotoCard(props) {
   return (
-    <div className='PhotoCard'>
-      
-    </div>
+    <a href='#' className='photo'>
+        <img src={props.imageUrl} alt="" />
+    </a>
   )
 }

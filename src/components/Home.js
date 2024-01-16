@@ -1,26 +1,7 @@
 import React from 'react'
 import './HomeStyle.css'
-// import { createApi } from 'unsplash-js';
-// const unsplash = createApi({
-//   accessKey: 'HmkoipsbzjqX9KXdXTGZ1tioG9kLTtrW56q4hLiJCn8',
-//   // `fetch` options to be sent with every request
-//   headers: { 'X-Custom-Header': 'foo' },
-// });
 
-// unsplash.search.getPhotos({
-//   query: '',
-//   page: 1,
-//   perPage: 10,
-//   color: 'green',
-//   orientation: 'portrait',
-// }).then(result=>{
-//   console.log(result)
-// });
-// unsplash.photos.getRandom({
-//   count: 10,
-// }).then(result=>{
-//     console.log(result)
-//   });
+
 
 export default function Home() {
 
@@ -80,6 +61,7 @@ export default function Home() {
           {/* <a href=""><button className='Explorer'>Explore</button></a> */}
         </a>
       </div>
+        
     </div>
   )
 }
