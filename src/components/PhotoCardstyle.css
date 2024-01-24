@@ -1,14 +1,13 @@
-.photo{
-    height: 30vh;
-    width: 25vw;
-}
-.photo img{
-    border-radius: 10px;
-    height: 100%;
+.photo {
+    width: calc(33.33% - 20px); /* 33.33% width for each card with some spacing */
+    margin: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  
+  .photo img {
     width: 100%;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-.photo img:hover{
-    transform: scale(1.1);
-}
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
