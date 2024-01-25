@@ -16,49 +16,49 @@ export default function Home() {
 
       <div className="main-categories">
        
-        <a href="#"  className='Travel'>
+        <a href="/travel"  className='Travel'>
           <p className='Text'>Travel</p>
           </a>
-        <a href='#' className="Space">
+        <a href='/space' className="Space">
           <p className='Text'>Space</p>
           {/* <a href=""><button className='Explorer'>Explore</button></a> */}
         </a>
-        <a href='#' className="Landscapes">
+        <a href='/landscapes' className="Landscapes">
           <p className='Text'>Landscapes</p>
           {/* <a href=""><button className='Explorer'>Explore</button></a> */}
         </a>
       </div>
 
       <div className="other-categories">
-        <a href='#' className="animals">
+        <a href='/animals' className="animals">
         <p className='Text'>animals</p>
           {/* <a href=""><button className='Explorer'>Explore</button></a> */}
         </a>
-        <a href='#' className="Pop">
+        <a href='/cinema' className="Pop">
         <p className='Text'>Cinema</p>
           {/* <a href=""><button className='Explorer'>Explore</button></a> */}
         </a>
-        <a href='#' className="SciFi">
+        <a href='/scifi' className="SciFi">
         <p className='Text'>Scifi</p>
           {/* <a href=""><button className='Explorer'>Explore</button></a> */}
         </a>
-        <a href='#' className="Inspiring">
+        <a href='/inspiring' className="Inspiring">
         <p className='Text'>Inspiring</p>
           {/* <a href=""><button className='Explorer'>Explore</button></a> */}
         </a>
-        <a href='#' className="Seasonal">
+        <a href='/seasonal' className="Seasonal">
         <p className='Text'>Seasonal</p>
           {/* <a href=""><button className='Explorer'>Explore</button></a> */}
         </a>
-        <a href='#' className="artistic">
+        <a href='/artistic' className="artistic">
         <p className='Text'>Artisitc</p>
           {/* <a href=""><button className='Explorer'>Explore</button></a> */}
         </a>
-        <a href='#' className="anime">
+        <a href='/anime' className="anime">
         <p className='Text'>Anime</p>
           {/* <a href=""><button className='Explorer'>Explore</button></a> */}
         </a>
-        <a href='#' className="fantasy">
+        <a href='/fantasy' className="fantasy">
           <p className='Text'>Fantasay</p>
           {/* <a href=""><button className='Explorer'>Explore</button></a> */}
         </a>

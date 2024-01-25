@@ -29,7 +29,7 @@ const FeaturePḥotos = (props) => {
       else{
         const newPhotos = result.response.results.map(photo => ({
           id: photo.id,
-          imageUrl: photo.urls.full,
+          imageUrl: photo.urls.regular,
         })
         );
         console.log(result.response.results.length)
@@ -54,7 +54,6 @@ const FeaturePḥotos = (props) => {
     .map(id => photos.find(photo => photo.id === id));
   return (
     <div className='container'>
-      <h1>Photo Sharing Website</h1>
       <InfiniteScroll
         dataLength={photos.length}
         next={fetchPhotos}

@@ -28,7 +28,7 @@ const Photos = () => {
       else{
         const newPhotos = result.response.map(photo => ({
           id: photo.id,
-          imageUrl: photo.urls.full,
+          imageUrl: photo.urls.regular,
         }));
         if(newPhotos.length<30){
           sethasMore(false)
@@ -51,7 +51,7 @@ const Photos = () => {
     .map(id => photos.find(photo => photo.id === id));
   return (
     <div className='container'>
-      <h1>Photo Sharing Website</h1>
+      
       <InfiniteScroll
         dataLength={photos.length}
         next={fetchPhotos}

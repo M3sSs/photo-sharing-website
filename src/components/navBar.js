@@ -19,7 +19,7 @@ export class Navbar extends Component {
         <nav className="navbar">
         <div className="navbar-container">
           <div className="header">
-          <a href="#" className="navbar-logo">PicsArt</a>
+          <a href="/" className="navbar-logo">PicsArt</a>
 
           <div className="checkbox">
           <input
@@ -36,7 +36,7 @@ export class Navbar extends Component {
           </div>
           <ul className={`navbar-links ${isCheckboxChecked ? 'active' : ''}`}>
             <li><a href="#">You</a></li>
-            <li><a href="#">Explore</a></li>
+            <li><a href="/explore">Explore</a></li>
             <li><a href="#">Prints</a></li>
             <li><a href="#">Trending 
             </a></li>
