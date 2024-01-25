@@ -9,29 +9,32 @@ const unsplash = createApi({
   headers: { 'X-Custom-Header': 'foo' },
 });
 
-const Photos = () => {
+const FeaturePḥotos = (props) => {
   const [photos, setPhotos] = useState([]);
   const [page, setPage] = useState(1);
   const [hasMore,sethasMore]=useState(true);
 
   const fetchPhotos = () => {
     // Fetch data from Unsplash API
-    unsplash.photos.getRandom({
-      count: 30,
-      page: page,
-    }).then(result => {
+    unsplash.search.getPhotos({
+        query: props.query,
+        page: page,
+        perPage: 20,
+      }).then(result => {
       console.log(result)
       if (result.errors) {
         // handle error here
         console.log('error occurred: ', result.errors[0]);
       } 
       else{
-        const newPhotos = result.response.map(photo => ({
+        const newPhotos = result.response.results.map(photo => ({
           id: photo.id,
           imageUrl: photo.urls.full,
-        }));
-        if(newPhotos.length<30){
-          sethasMore(false)
+        })
+        );
+        console.log(result.response.results.length)
+        if(result.response.results.length<4){
+            sethasMore(false)
         }
         // Update the state with new photos
         setPhotos(prevPhotos => [...prevPhotos, ...newPhotos]);
@@ -45,9 +48,9 @@ const Photos = () => {
 
   useEffect(() => {
     fetchPhotos();
-  }, []); // The empty dependency array ensures that the effect runs once when the component mounts
-
-  const uniquePhotos = Array.from(new Set(photos.map(photo => photo.id)))
+  }, []);
+   // The empty dependency array ensures that the effect runs once when the component mounts
+   const uniquePhotos = Array.from(new Set(photos.map(photo => photo.id)))
     .map(id => photos.find(photo => photo.id === id));
   return (
     <div className='container'>
@@ -58,7 +61,8 @@ const Photos = () => {
         hasMore={hasMore}
         loader={<h4>Loading...</h4>}
       >
-        {uniquePhotos.map(photo => (
+        {
+        uniquePhotos.map(photo => (
           <PhotoCard key={photo.id} imageUrl={photo.imageUrl} />
         ))}
       </InfiniteScroll>
@@ -66,4 +70,4 @@ const Photos = () => {
   );
 };
 
-export default Photos;
+export default FeaturePḥotos;
