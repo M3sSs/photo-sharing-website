@@ -4,9 +4,7 @@ import './HomeStyle.css'
 
 
 export default function Home() {
-  useEffect(()=>{
-    console.log("aaa")
-  },[])
+  
   return (
     <div className='container'>
       

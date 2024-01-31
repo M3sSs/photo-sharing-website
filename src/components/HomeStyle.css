@@ -47,6 +47,7 @@ body{
   /* flex-direction: column; */
   /* grid-template-columns: repeat(3, 1fr); for creating 3 columns of equal width */
   align-items: center;
+  /* flex-wrap: wrap; */
   /* justify-content: center; */
   padding: 4%;
   /* grid-template-columns: 1fr; */
@@ -295,6 +296,7 @@ body{
 
   .main-categories {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
