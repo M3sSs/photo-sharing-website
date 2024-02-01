@@ -1,6 +1,6 @@
 
 import './App.css';
-import React, { useContext,useEffect,useState } from 'react';
+import React, { useContext,useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Photos from './components/Photos';
@@ -10,27 +10,24 @@ import {Route,Routes} from "react-router-dom"
 import { noteContext } from './components/NoteState';
 const App = () => {
   
-const {searchEnable,query,updateContextState}=useContext(noteContext);
-  const [i,setI]=useState(0);
-  console.log(searchEnable,query,updateContextState)
-    // if(i==0)
-    // setTimeout(() => {
-    //   updateContextState({searchEnable: true,query: 'gaming'});
-    //     setI(1)
-    // }, 10000);
-
+const {query,updateContextState}=useContext(noteContext);
+  console.log(query,updateContextState)
+  
   useEffect(() => {
     console.log("render")
-  }, [searchEnable,query]);
+    
+  }, [query]);
+  
   
   return (
     <div>
       
         <Navbar/>
-        {
-          (searchEnable)?<FeaturePḥotos query={query} />:
+        
           
-            <Routes>
+          {
+            (query!=='')?(<FeaturePḥotos query={query}/>):
+            (<Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/explore" element={<Photos/>}/>
             
@@ -46,8 +43,9 @@ const {searchEnable,query,updateContextState}=useContext(noteContext);
             <Route path='/anime' element={<FeaturePḥotos query='anime'/>}/>
             <Route path='/fantasy' element={<FeaturePḥotos query='fantasy'/>}/>
 
-            </Routes>
+            </Routes>)
           }
+          
       
       
     </div>

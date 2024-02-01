@@ -47,8 +47,13 @@ const FeaturePḥotos = (props) => {
   };
 
   useEffect(() => {
+    setPhotos([]);
+    setPage(1);
+    sethasMore(true);
+
+    // Fetch new photos based on the updated query
     fetchPhotos();
-  }, []);
+  }, [props.query]);
    // The empty dependency array ensures that the effect runs once when the component mounts
    const uniquePhotos = Array.from(new Set(photos.map(photo => photo.id)))
     .map(id => photos.find(photo => photo.id === id));

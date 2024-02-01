@@ -5,7 +5,6 @@ export const noteContext=createContext();
 
 export default function NoteState(props) {
   const [noteState, setNoteState] = useState({
-    searchEnable: false,
     query: ''
   });
   const updateContextState = (newState) => {

@@ -3,7 +3,7 @@ import './NavbarStyle.css';
 import { noteContext } from './NoteState';
 
 const Navbar = () => {
-  const { searchEnable, query, updateContextState } = useContext(noteContext);
+  const {  query, updateContextState } = useContext(noteContext);
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
   // console.log(searchEnable,query)
   const handleCheckboxChange = () => {
@@ -15,13 +15,13 @@ const Navbar = () => {
     const newQuery = document.querySelector('#query').value;
     document.querySelector('#query').value = '';
     // console.log(updateContextState)
-    updateContextState({ searchEnable: true, query: newQuery });
+    updateContextState({ query: newQuery });
     
   };
   useEffect(() => {
-    console.log(searchEnable, query);
+    console.log( query);
     // updateContextState({ searchEnable: false, query: null });
-  }, [searchEnable, query]);
+  }, [ query]);
   return (
     <nav className="navbar">
       <div className="navbar-container">
