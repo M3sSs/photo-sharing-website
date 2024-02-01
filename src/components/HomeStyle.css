@@ -19,6 +19,7 @@ body{
   align-items: center;
   justify-content: center;
   grid-template-rows: auto auto auto;
+  width: 100vw;
   gap: 20px;
   padding: 20px;
 
@@ -64,7 +65,7 @@ body{
   background-color: #ddd;
   /* Set a background color for visualization */
   padding: 15px;
-  height: 30vh;
+  height: 30%;
   width: 25vw;
   /* width: auto; */
   text-align: center;
@@ -311,16 +312,30 @@ body{
     /* Set a background color for visualization */
     /* padding: 15px; */
     height: 20cap;
-    width: 60%;
+    width: 80vw;
     margin: 2%;
     /* width: auto; */
     text-align: center;
   }
 
   .other-categories {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     /* gap: 2rem; */
+    align-items: center;
+    justify-content: center;
+    column-gap: 2%;
     width: 90%;
   }
+    .animals,
+    .Pop,
+    .SciFi,
+    .Inspiring,
+    .Seasonal,
+    .artistic,
+    .anime,
+    .fantasy{
+        width: 70vw;
+        font-size: 50%;
+    }
 }

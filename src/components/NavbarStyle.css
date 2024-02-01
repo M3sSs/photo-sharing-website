@@ -84,6 +84,16 @@ body {
     /* height: 10px; */
   }
   
+  form img{
+    width: auto;
+    height: 20px;
+  }
+  form input{
+    height: 10px;
+  }
+  form img:hover{
+    cursor: pointer;
+  }
   /* Responsive styles for smaller screens */
   @media (max-width: 768px) {
     /* .navbar-links{

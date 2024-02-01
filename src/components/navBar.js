@@ -49,7 +49,8 @@ const Navbar = () => {
           <li>
             <form className="search-form" type='submit' onSubmit={handleSubmit}>
               <input type="text" placeholder="Photos, people, or groups" id='query' />
-              <a href='/search'><button type='submit' id='click'>click</button></a>
+              <button type='submit' id='click'><img src="Images/searchIcon.png" alt=""/></button>
+              
             </form>
           </li>
           <li><a href="#">More</a></li>
