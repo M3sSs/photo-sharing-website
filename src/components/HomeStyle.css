@@ -19,7 +19,7 @@ body{
   align-items: center;
   justify-content: center;
   grid-template-rows: auto auto auto;
-  width: 100vw;
+  width: 80vw;
   gap: 20px;
   padding: 20px;
 
@@ -32,13 +32,14 @@ body{
   
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 80vw;
+  padding-top: 2vw;
 }
 
 .Heading h1 {
   /* font-weight: bold; */
   font-family: 'Libre Baskerville';
-  font-size: 40px;
+  font-size: 50px;
 }
 
 /* Style the main categories */
@@ -312,7 +313,7 @@ body{
     /* Set a background color for visualization */
     /* padding: 15px; */
     height: 20cap;
-    width: 80vw;
+    width: 70vw;
     margin: 2%;
     /* width: auto; */
     text-align: center;
@@ -335,7 +336,7 @@ body{
     .artistic,
     .anime,
     .fantasy{
-        width: 70vw;
+        width: 60vw;
         font-size: 50%;
     }
 }
