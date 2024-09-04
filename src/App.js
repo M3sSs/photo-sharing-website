@@ -31,7 +31,7 @@ const {query,updateContextState}=useContext(noteContext);
             <Route path="/" element={<Home/>}/>
             <Route path="/explore" element={<Photos/>}/>
             
-            <Route path='/travel' element={<FeaturePḥotos query='travel'/>}/>
+            <Route path='/travel' element={<FeaturePḥotos query='travel' />}/>
             <Route path='/space' element={<FeaturePḥotos query='space'/>}/>
             <Route path='/landscapes' element={<FeaturePḥotos query='landscapes'/>}/>
             <Route path='/animals' element={<FeaturePḥotos query='animals'/>}/>
