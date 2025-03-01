@@ -11,7 +11,8 @@ import { noteContext } from './components/NoteState';
 const App = () => {
   
 const {query,updateContextState}=useContext(noteContext);
-  console.log(query,updateContextState)
+  console.log(query)
+  console.log(updateContextState)
   
   useEffect(() => {
     console.log("render")
@@ -42,7 +43,7 @@ const {query,updateContextState}=useContext(noteContext);
             <Route path='/artistic' element={<FeaturePḥotos query='artisitic'/>}/>
             <Route path='/anime' element={<FeaturePḥotos query='anime'/>}/>
             <Route path='/fantasy' element={<FeaturePḥotos query='fantasy'/>}/>
-
+            <Route/>
             </Routes>)
           }
           

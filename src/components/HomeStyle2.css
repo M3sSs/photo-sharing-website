@@ -1,239 +1,153 @@
 @import url('https://fonts.googleapis.com/css2?family=Kenia&family=Libre+Baskerville&family=Montserrat:ital,wght@1,300&family=Playfair+Display:ital@1&family=Roboto+Mono:ital,wght@0,100;1,400&family=Zen+Dots&display=swap');
-body{
-  background-color:  #ffffff; /* Light Peach */
+
+body {
+  background-color: #ffffff; /* Light Peach */
+  margin: 0;
+  font-family: 'Roboto Mono', monospace; /* Default font */
 }
 
-.Container{
-    display: flex;
-    margin-top: 10vh;
-    margin-right: 5vw;
-    margin-left: 5vw;
-    margin-bottom: 5vw;
-    width: 90vw;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh 0;
+  width: 100%;
 }
 
-.Heading{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Montserrat';
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    font-size: 1rem;
-    color: #201e1e;
-    src: url(https://fonts.gstatic.com/s/montserrat/v26/JTUFjIg1_i6t8kCHKm459Wx7xQYXK0vOoz6jq_p9WXV0poK5.woff2) format('woff2');
-    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+.Heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #201e1e;
+  margin-bottom: 2rem;
 }
 
-.main-categories{
-    display: grid;
-    grid-template-rows: repeat(4,1fr);
-    width: 100%;
-    row-gap: 3vh;
+.main-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px; /* Optional: Limit the width for better control */
+  justify-content: center; /* Center align grid items horizontally */
 }
 
-#child1{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: .5rem;
+.main-categories > div {
+  display: grid;
+  gap: 1rem;
+  justify-items: center; /* Center align grid items in each grid cell */
+}
 
-    height: 15rem;
-}
-#child2,#child4{
-    display: grid;
-    grid-template-columns: 1.15fr 1fr;
-    column-gap: 5px;
-    height: 15rem;
-}
-#child3,#child5{
-    display: grid;
-    grid-template-columns: 1fr 1.15fr;
-    column-gap: 5px;
-    height: 15rem;
-}
-.Travel,
-.Space,
-.Landscapes {
-  
+.main-categories a {
+  display: block;
   background-color: #ddd;
-  padding: 15px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  color: #ffffff;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 200px; /* Default height for larger screens */
+  border-radius: 8px;
 }
-.Travel{
+
+.Travel {
   background-image: url('HomeImages/Travel.jpeg');
-  background-size: 100% 100%;
-  
 }
+
 .Space {
-    background-image: url('HomeImages/Space.jpeg');
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-  }
-  
-  .Landscapes {
-    background-image: url('HomeImages/Landscape.jpeg');
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-  }
-  
-.Travel:hover{
-  transform: scale(1.1);
-}    
-.Space:hover{
-  transform: scale(1.1);
+  background-image: url('HomeImages/Space.jpeg');
 }
-.Landscapes:hover{
-  transform: scale(1.1);
-}    
-.animals,
-.Pop,
-.SciFi,
-.Inspiring,
-.Seasonal,
-.artistic,
-.anime,
-.fantasy {
-  background-color: #ddd;
-  padding: 15px;                                                                         
-  text-align: center;
-  text-decoration: none;
-  transition: transform 0.3s ease;
+
+.Landscapes {
+  background-image: url('HomeImages/Landscape.jpeg');
 }
 
 .animals {
   background-image: url('HomeImages/Animal.jpeg');
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  text-align: center;
 }
+
 .Pop {
-    background-image: url('HomeImages/Batman.jpeg');
-    background-size: 100% 100%;
-    /* Adjust the background size as needed */
-    background-position: center;
-    /* Center the background image */
-    background-repeat: no-repeat;
-    text-align: center;
+  background-image: url('HomeImages/Batman.jpeg');
+}
+
+.SciFi {
+  background-image: url('HomeImages/SciFi.jpeg');
+}
+
+.Inspiring {
+  background-image: url('HomeImages/Inspiring.jpeg');
+}
+
+.Seasonal {
+  background-image: url('HomeImages/Winter.jpeg');
+}
+
+.artistic {
+  background-image: url('HomeImages/Artist.jpeg');
+}
+
+.anime {
+  background-image: url('HomeImages/Anime.jpeg');
+}
+
+.fantasy {
+  background-image: url('HomeImages/Fantasy.jpeg');
+}
+
+.main-categories a:hover {
+  transform: scale(1.05);
+  background-color: #ccc;
+}
+
+.Text {
+  font-size: 1.25rem;
+  font-family: 'Libre Baskerville', serif;
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Heading {
+    font-size: 1.5rem;
   }
-  
-  .SciFi {
-    background-image: url('HomeImages/SciFi.jpeg');
-    background-size: 100% 100%;
-    /* Adjust the background size as needed */
-    background-position: center;
-    /* Center the background image */
-    background-repeat: no-repeat;
-    /* Do not repeat the background image */
-    text-align: center;
+
+  .main-categories {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
-  
-  .Inspiring {
-    background-image: url('HomeImages/Inspiring.jpeg');
-    background-size: 100% 100%;
-    /* Adjust the background size as needed */
-    background-position: center;
-    /* Center the background image */
-    background-repeat: no-repeat;
-    /* Do not repeat the background image */
-    /* z-index: -1;
-    opacity: 0.80; */
-    /* padding: 15px; */
-    text-align: center;
+
+  .main-categories a {
+    height: 150px; /* Adjust height for smaller screens */
   }
-  
-  .Seasonal {
-    background-image: url('HomeImages/Winter.jpeg');
-    background-size: 100% 100%;
-    /* Adjust the background size as needed */
-    background-position: center;
-    /* Center the background image */
-    background-repeat: no-repeat;
-    /* Do not repeat the background image */
-    /* z-index: -1;
-    opacity: 0.80; */
-    /* padding: 15px; */
-    text-align: center;
+
+  .Text {
+    font-size: 1rem;
   }
-  
-  .artistic {
-    background-image: url('HomeImages/Artist.jpeg');
-    background-size: 100% 100%;
-    /* Adjust the background size as needed */
-    background-position: center;
-    /* Center the background image */
-    background-repeat: no-repeat;
-    /* Do not repeat the background image */
-    /* z-index: -1;
-    opacity: 0.80; */
-    /* padding: 15px; */
-    text-align: center;
+}
+
+@media (max-width: 480px) {
+  .Heading {
+    font-size: 1.25rem;
   }
-  
-  .anime {
-    background-image: url('HomeImages/Anime.jpeg');
-    background-size: 100% 100%;
-    /* Adjust the background size as needed */
-    background-position: center;
-    /* Center the background image */
-    background-repeat: no-repeat;
-    /* Do not repeat the background image */
-    /* z-index: -1;
-    opacity: 0.80; */
-    /* padding: 15px; */
-    text-align: center;
+
+  .main-categories {
+    grid-template-columns: 1fr;
   }
-  
-  .fantasy {
-    background-image: url('HomeImages/Fantasy.jpeg');
-    background-size: 100% 100%;
-    /* Adjust the background size as needed */
-    background-position: center;
-    /* Center the background image */
-    background-repeat: no-repeat;
-    text-align: center;
+
+  .main-categories a {
+    height: 120px; /* Further reduce height for very small screens */
   }
-  .animals:hover{
-    transform: scale(1.1);
+
+  .Text {
+    font-size: 0.875rem;
   }
-  .Pop:hover{
-    transform: scale(1.1);
-  }
-  .SciFi:hover{
-    transform: scale(1.1);
-  }
-  .Inspiring:hover{
-    transform: scale(1.1);
-  }
-  .Seasonal:hover{
-    transform: scale(1.1);
-  }
-  .artistic:hover{
-    transform: scale(1.1);
-  }
-  .anime:hover{
-    transform: scale(1.1);
-  }
-  .fantasy:hover{
-    transform: scale(1.1);
-  }
-  .Text{
-    font-size: 40px;
-    /* font-style: none; */
-    /* font-weight: bold; */
-    font-family: 'Libre Baskerville', serif;
-    color: #ffffff;
-  }
-   
+}

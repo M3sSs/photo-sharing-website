@@ -4,9 +4,7 @@ import { useState } from 'react';
 export const noteContext=createContext();
 
 export default function NoteState(props) {
-  const [noteState, setNoteState] = useState({
-    query: ''
-  });
+  const [noteState, setNoteState] = useState({query: ''});
   const updateContextState = (newState) => {
     setNoteState(() => ({
       ...newState

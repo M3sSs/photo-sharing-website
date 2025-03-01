@@ -1,0 +1,9 @@
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 16px; /* Space between photos */
+  padding: 16px;
+  justify-items: center; /* Center items in their grid cell */
+  background-color: #f8f9fa; /* Light background */
+  border-radius: 8px;
+}

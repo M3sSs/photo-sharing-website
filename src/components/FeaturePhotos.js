@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import './PhotosStyle.css';
 import { createApi } from 'unsplash-js';
-import PhotoCard from './PhotoCard';
+import PhotoGallery from './PhotoGallery';
 
 const unsplash = createApi({
   accessKey: 'HmkoipsbzjqX9KXdXTGZ1tioG9kLTtrW56q4hLiJCn8',
@@ -30,6 +30,11 @@ const FeaturePḥotos = (props) => {
         const newPhotos = result.response.results.map(photo => ({
           id: photo.id,
           imageUrl: photo.urls.regular,
+          downloadUrl: photo.links.html,
+          photographer: {
+            name: photo.user.first_name || 'Unknown',
+            profileLink: photo.user.links.html,
+          },
         })
         );
         console.log(result.response.results.length)
@@ -66,9 +71,8 @@ const FeaturePḥotos = (props) => {
         loader={<h4>Loading...</h4>}
       >
         {
-        uniquePhotos.map(photo => (
-          <PhotoCard key={photo.id} imageUrl={photo.imageUrl} />
-        ))}
+          <PhotoGallery photos={uniquePhotos} />
+        }
       </InfiniteScroll>
     </div>
   );

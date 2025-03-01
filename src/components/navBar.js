@@ -26,7 +26,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="header">
-          <a href="/" className="navbar-logo">PicsArt</a>
+          <a href="/" className="navbar-logo">Gr8Pic</a>
           <div className="checkbox">
             <input
               type="checkbox"
@@ -49,7 +49,7 @@ const Navbar = () => {
           <li>
             <form className="search-form" type='submit' onSubmit={handleSubmit}>
               <input type="text" placeholder="Photos, people, or groups" id='query' />
-              <button type='submit' id='click'><img src="Images/searchIcon.png" alt=""/></button>
+              <button type='submit' id='click' onClick={handleCheckboxChange}><img src="Images/searchIcon.png" alt=""/></button>
               
             </form>
           </li>
